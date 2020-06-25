@@ -20,7 +20,7 @@ service:
   port: 80
 
 route:
-  enabled: true
+  enabled: false
 
 ingress:
   enabled: true
@@ -32,8 +32,8 @@ ingress:
 #  host: hello
   namespaceInHost: true
   subdomain: containers.appdomain.cloud
-#  path: "/"
-  path: "/PlantsByWebSphere"
+  path: "/"
+  
   
 
 #  tlsSecretName: ""
