@@ -31,8 +31,8 @@ ingress:
 
 #  host: hello
   namespaceInHost: true
-  subdomain: containers.appdomain.cloud
-  path: "/PlantsByWebSphere"
+  subdomain: containers.appdomain.cloud/PlantsByWebSphere
+#  path: "/PlantsByWebSphere"
 #  path: "/"
 
 #  tlsSecretName: ""
