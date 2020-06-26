@@ -13,12 +13,12 @@ spec:
   to:
     kind: Service
     name: {{ $fullName }}
-    weight: 100
+    weight: 90
   path: /health
   to:
       kind: Service
       name: {{ $fullName }}
-      weight: 100
+      weight: 10
   tls:
     termination: edge
 {{- end }}
