@@ -7,13 +7,18 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-options: Validate=false
 spec:
-  host: wildcard.appdomain.cloud  
-  wildcardPolicy: Subdomain  
+  #host: wildcard.appdomain.cloud  
+  #wildcardPolicy: Subdomain  
   path: /PlantsByWebSphere
   to:
     kind: Service
     name: {{ $fullName }}
     weight: 100
+  path: /health
+  to:
+      kind: Service
+      name: {{ $fullName }}
+      weight: 100
   tls:
     termination: edge
 {{- end }}
