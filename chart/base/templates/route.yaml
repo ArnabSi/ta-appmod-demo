@@ -7,11 +7,13 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-options: Validate=false
 spec:
+  host: containers.appdomain.cloud  
+  wildcardPolicy: Subdomain  
+  path: /PlantsByWebSphere
   to:
     kind: Service
     name: {{ $fullName }}
     weight: 100
   tls:
     termination: edge
-  wildcardPolicy: None
 {{- end }}
