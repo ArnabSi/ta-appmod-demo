@@ -7,7 +7,7 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-options: Validate=false
 spec:
-  #path: /PlantsByWebSphere
+  path: /PlantsByWebSphere
   to:
     kind: Service
     name: {{ $fullName }}
